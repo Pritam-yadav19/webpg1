@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Contains from './container';
+import Header from './header/header';
+import Logout from './logout';
+import Carts from './header/cart';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import { useState } from 'react';
 function App() {
+  const [CntMob,setCntMob]=useState(0);
+  const [CntLap,setCntLap]=useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Header />
+      <Routes>
+        <Route path='/webpg1' element={<Contains CntMob={CntMob} setCntMob={setCntMob} CntLap={CntLap} setCntLap={setCntLap}/>} />
+        <Route path='/' element={<Contains CntMob={CntMob} setCntMob={setCntMob} CntLap={CntLap} setCntLap={setCntLap}/>} />
+        <Route path='/contains' element={<Contains CntMob={CntMob} setCntMob={setCntMob} CntLap={CntLap} setCntLap={setCntLap}/>} />
+        <Route path='/logout' element={<Logout/>} />
+        <Route path='/cart' element={<Carts CntMob={CntMob} CntLap={CntLap}/>} />
+      </Routes>
+    </Router>
+      
   );
 }
 
