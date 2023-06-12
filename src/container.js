@@ -6,9 +6,7 @@ function Contains({CntMob,setCntMob,CntLap,setCntLap}){
     const styled={
         width:'70%',
         marginTop: '200px',
-        
         marginLeft:'90px'
-        
     }
     return(
         <>  

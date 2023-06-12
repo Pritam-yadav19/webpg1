@@ -4,7 +4,6 @@ function Carts({CntMob,CntLap}){
         border:'solid',
         fontSize:'26px',
         fontWeight:'bold'
-        
     }
     return(
         <div style={{marginLeft:'90px',marginTop:'200px',width:'70%',display:'flex',flexDirection:'column',justifyContent:'center'}}>
