@@ -4,11 +4,11 @@ import Laptops from "./body/laptops";
 
 function Contains({CntMob,setCntMob,CntLap,setCntLap}){
     const styled={
-        marginLeft:'500px',
+        width:'70%',
         marginTop: '200px',
-        border:'solid',
-        padding:'50px',
-        marginRight:'400px'
+        
+        marginLeft:'90px'
+        
     }
     return(
         <>  

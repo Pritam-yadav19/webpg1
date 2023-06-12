@@ -3,7 +3,8 @@ const Mobiles=({CntMob,setCntMob})=> {
     const styled={
         border:'solid',
         display:'flex',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+        marginBottom:'80px'
     }
     function Count(){
         setCntMob(CntMob+1);
